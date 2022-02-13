@@ -9,7 +9,7 @@ type TestPanicJob struct {
 	Job job.Job
 }
 
-func (j TestPanicJob) Execute() {
+func (j TestPanicJob) Execute(jobData map[string]string) {
 	log.Info("In MyJPanicJobob")
 	a := 0
 	i := 100 / a
@@ -18,4 +18,8 @@ func (j TestPanicJob) Execute() {
 
 func (j TestPanicJob) JobName() string {
 	return "badjob.PanicJob"
+}
+
+func (j TestPanicJob) GetJobData() map[string]string {
+	return nil
 }

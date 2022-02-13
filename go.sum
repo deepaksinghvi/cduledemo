@@ -12,6 +12,10 @@ github.com/deepaksinghvi/cdule v1.0.0 h1:djbmXNoslWI1afAJ7Vo0XplWZmMAzRDJnXwQMQZ
 github.com/deepaksinghvi/cdule v1.0.0/go.mod h1:XEpNLMBeEVcqF8Sz4SoGpQs+5aCeHzNlScuCmyRrKcs=
 github.com/deepaksinghvi/cdule v1.0.1 h1:mR+2VDl65Y3Uo894/eKcHDoi5/JQOnEQbwprtaGpchE=
 github.com/deepaksinghvi/cdule v1.0.1/go.mod h1:XEpNLMBeEVcqF8Sz4SoGpQs+5aCeHzNlScuCmyRrKcs=
+github.com/deepaksinghvi/cdule v1.0.2 h1:zTFwfPPkOCDarxqB6fmfgSz/OwdQhgFPjlIDujLR92A=
+github.com/deepaksinghvi/cdule v1.0.2/go.mod h1:XEpNLMBeEVcqF8Sz4SoGpQs+5aCeHzNlScuCmyRrKcs=
+github.com/deepaksinghvi/cdule v1.0.3 h1:h2mKqz30OraQImRi8NFm1+4CZYArWvWmjtUoyBCQkcw=
+github.com/deepaksinghvi/cdule v1.0.3/go.mod h1:XEpNLMBeEVcqF8Sz4SoGpQs+5aCeHzNlScuCmyRrKcs=
 github.com/fsnotify/fsnotify v1.5.1 h1:mZcQUHVQUQWoPXXtuf9yuEXKudkV2sx1E06UadKWpgI=
 github.com/fsnotify/fsnotify v1.5.1/go.mod h1:T3375wBYaZdLLcVNkcVbzGHY7f1l/uK5T5Ai1i3InKU=
 github.com/go-kit/log v0.1.0/go.mod h1:zbhenjAZHb184qTLMA9ZjW7ThYL0H2mk7Q6pNt4vbaY=

@@ -20,7 +20,11 @@ func main() {
 	cdule.NewCdule()
 
 	testJob := job2.TestJob{}
-	testJobModel, _ := watcher.NewJob(&testJob, nil).Build(utils.EveryMinute)
+	jobData := make(map[string]string)
+	jobData["one"] = "1"
+	jobData["two"] = "2"
+	jobData["three"] = "3"
+	testJobModel, _ := watcher.NewJob(&testJob, jobData).Build(utils.EveryMinute)
 	printJobs(testJobModel)
 
 	/*

@@ -3,7 +3,7 @@ module github.com/deepaksinghvi/cduledemo
 go 1.18
 
 require (
-	github.com/deepaksinghvi/cdule v1.0.1 // indirect
+	github.com/deepaksinghvi/cdule v1.0.3 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect

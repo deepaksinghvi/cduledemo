@@ -2,6 +2,12 @@
 
 A demo project for [cdule](https://github.com/deepaksinghvi/cdule) library.
 
+```
+go get github.com/deepaksinghvi/cdule
+or use the following for go1.18 with tag v1.0.2
+go1.18beta2 get github.com/deepaksinghvi/cdule@v1.0.2
+
+```
 #### Initiate Cdule Background Watcher
 ```
 cdule := cdule.Cdule{}
