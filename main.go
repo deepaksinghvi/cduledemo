@@ -24,15 +24,24 @@ func main() {
 	jobData["one"] = "1"
 	jobData["two"] = "2"
 	jobData["three"] = "3"
-	testJobModel, _ := watcher.NewJob(&testJob, jobData).Build(utils.EveryMinute)
+
+	testJobModel, err := model.CduleRepos.CduleRepository.GetJobByName(testJob.JobName())
+	if nil != err {
+		model.CduleRepos.CduleRepository.DeleteJob(testJobModel.ID)
+	}
+	testJobModel, _ = watcher.NewJob(&testJob, jobData).Build(utils.EveryMinute)
 	printJobs(testJobModel)
 
 	/*
-			This is the job which would create panic and cdule library is able to handle if there are any panics from
-		    different jobs defined by users.
+		This is the job which would create panic and cdule library is able to handle if there are any panics from
+		different jobs defined by users.
 	*/
 	testPanicJob := badjob.TestPanicJob{}
-	testPanicJobModel, _ := watcher.NewJob(&testPanicJob, nil).Build(utils.EveryMinute)
+	testPanicJobModel, err := model.CduleRepos.CduleRepository.GetJobByName(testPanicJob.JobName())
+	if nil != err {
+		model.CduleRepos.CduleRepository.DeleteJob(testPanicJobModel.ID)
+	}
+	testPanicJobModel, _ = watcher.NewJob(&testPanicJob, nil).Build(utils.EveryMinute)
 	printJobs(testPanicJobModel)
 
 	time.Sleep(5 * time.Minute)
