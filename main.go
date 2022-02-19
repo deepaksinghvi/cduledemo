@@ -7,7 +7,6 @@ import (
 	"github.com/deepaksinghvi/cdule/pkg/cdule"
 	"github.com/deepaksinghvi/cdule/pkg/model"
 	"github.com/deepaksinghvi/cdule/pkg/utils"
-	"github.com/deepaksinghvi/cdule/pkg/watcher"
 	"github.com/deepaksinghvi/cduledemo/pkg/badjob"
 	job2 "github.com/deepaksinghvi/cduledemo/pkg/job"
 	log "github.com/sirupsen/logrus"
@@ -16,8 +15,8 @@ import (
 func main() {
 	log.Info("Cdule Demo")
 
-	cdule := cdule.Cdule{}
-	cdule.NewCdule()
+	c := cdule.Cdule{}
+	c.NewCdule()
 
 	testJob := job2.TestJob{}
 	jobData := make(map[string]string)
@@ -29,7 +28,8 @@ func main() {
 	if nil != err {
 		model.CduleRepos.CduleRepository.DeleteJob(testJobModel.ID)
 	}
-	testJobModel, _ = watcher.NewJob(&testJob, jobData).Build(utils.EveryMinute)
+
+	testJobModel, _ = cdule.NewJob(&testJob, jobData).Build(utils.EveryMinute)
 	printJobs(testJobModel)
 
 	/*
@@ -41,11 +41,11 @@ func main() {
 	if nil != err {
 		model.CduleRepos.CduleRepository.DeleteJob(testPanicJobModel.ID)
 	}
-	testPanicJobModel, _ = watcher.NewJob(&testPanicJob, nil).Build(utils.EveryMinute)
+	testPanicJobModel, _ = cdule.NewJob(&testPanicJob, nil).Build(utils.EveryMinute)
 	printJobs(testPanicJobModel)
 
 	time.Sleep(5 * time.Minute)
-	cdule.StopWatcher()
+	c.StopWatcher()
 
 	log.Info("---Cdule Demo---")
 }
