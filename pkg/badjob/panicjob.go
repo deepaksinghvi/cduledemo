@@ -1,12 +1,12 @@
 package badjob
 
 import (
-	"github.com/deepaksinghvi/cdule/pkg/job"
+	"github.com/deepaksinghvi/cdule/pkg/cdule"
 	log "github.com/sirupsen/logrus"
 )
 
 type TestPanicJob struct {
-	Job job.Job
+	Job cdule.Job
 }
 
 func (j TestPanicJob) Execute(jobData map[string]string) {

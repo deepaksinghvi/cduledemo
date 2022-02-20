@@ -3,7 +3,7 @@ module github.com/deepaksinghvi/cduledemo
 go 1.18
 
 require (
-	github.com/deepaksinghvi/cdule v1.0.7
+	github.com/deepaksinghvi/cdule v0.0.3
 	github.com/sirupsen/logrus v1.8.1
 )
 
@@ -36,7 +36,7 @@ require (
 	golang.org/x/text v0.3.7 // indirect
 	gopkg.in/ini.v1 v1.66.4 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gorm.io/driver/postgres v1.3.0 // indirect
-	gorm.io/driver/sqlite v1.3.0 // indirect
-	gorm.io/gorm v1.23.0 // indirect
+	gorm.io/driver/postgres v1.3.1 // indirect
+	gorm.io/driver/sqlite v1.3.1 // indirect
+	gorm.io/gorm v1.23.1 // indirect
 )

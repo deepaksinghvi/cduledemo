@@ -40,5 +40,20 @@ time.Sleep(5 * time.Minute)
 cdule.StopWatcher()
 ```
 
+### 5. Run From command Line
 
-For more details check [cdule](https://github.com/deepaksinghvi/cdule) documentation.
+Worker name to be picked based on the hostname
+```
+./cdule
+```
+
+or worker name can be supplied in the format of 
+cdule <workername> 
+ 
+```
+cdule worker1
+```
+
+For more details check documentation.
+* [cdule_repo](https://github.com/deepaksinghvi/cdule) 
+* [cdule_wiki](https://github.com/deepaksinghvi/cdule/wiki)
