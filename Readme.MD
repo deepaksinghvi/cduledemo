@@ -44,14 +44,14 @@ cdule.StopWatcher()
 
 Worker name to be picked based on the hostname
 ```
-./cdule
+./cduledemo
 ```
 
 or worker name can be supplied in the format of 
-cdule <workername> 
+cduledemo <workername> 
  
 ```
-cdule worker1
+cduledemo worker1
 ```
 
 For more details check documentation.
